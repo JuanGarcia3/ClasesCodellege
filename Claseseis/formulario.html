@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Formulario Estructura </title>
+		<style>
+			body{
+				border-style: solid;
+				border-width: 1px;
+				border-radius: 5 px;
+				margin: 20px;
+				margin-left: 20px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			#table{
+				border-style: solid;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<center style="background-color: LightGreen">
+			<form id="table">
+				<table style="background-color: GreenYellow">
+					<tbody>
+						<!---Formulario1--->
+						<h2> Step 1: Your details </h2>
+					
+					
+						<tr>
+							<td><label> Name: </label></td>
+							<td><input type="text" name="name" placeholder="First name & last name"></td>
+						</tr>
+						<br>
+						<tr>
+							<td><label> Email: </label></td>
+							<td><input type="email" name="Email" placeholder="Example@domain.com"></td>
+						</tr>	
+						<br>
+						<tr>
+							<td><label> Phone: </label></td>
+							<td><input type="text" min="0" max="10" placeholder="123-456-7890"></td>
+						</tr>
+						<br>
+					</tbody>
+				</table>
+				<table style="background-color: GreenYellow">
+					<tbody>
+							<!---Formulario2--->
+						<h2> Step 2: Delivery Address </h2>
+						<tr>
+							<td><label> Address: </label></td>
+							<td><input type="email" name="email">
+						</tr>
+						<br>
+					</tbody>
+					<tbody>
+						<tr>
+							<td><label> Post Code: </label></td>
+							<td><input type="text" name="post-code" placeholder="123456" min="0" max="6">
+						</tr>
+						<br>
+						<tr>
+							<td><label> Country: </label></td>
+							<td><input type="text" name="country">
+						</tr>
+						<br>
+					</tbody>
+				</table>
+				<table style="background-color: GreenYellow">
+					<tbody>
+						<!---Formulario3--->
+						<h2> Step 3: Card Details </h2>
+							<tr>
+								<td><label> CardNumber: </label></td>
+								<td><input type="text" min="0" max="16">
+							</tr>
+							<tr>
+								<td><label>Security code:</label></td>
+								<td><input type="tel" placeholder="123" min="0" max="3">
+							</tr>
+							<tr>
+								<td><label> Name on card </label></td>
+								<td><input type="text" placeholder="Exact Name on the card" >
+							</tr>
+					</tbody>
+				</table>
+			</form>	
+		</center>
+	</body>
+</html>
