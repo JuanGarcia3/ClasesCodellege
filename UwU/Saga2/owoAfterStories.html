@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title> Comparar </title>
+	</head>
+	<body>
+		<h1> Se comparan 2 numeros </h1>
+	</body>
+</html>
+
+<script>
+	var num1, num2;
+	num1 = window.prompt("input the first integer", "0");
+	num2 = window.prompt("input the second integer", "0");
+	
+	if(parseInt(num1, 2) > parseInt(num2, 2)){
+		console.log(" the larger of " + num1 + " and " + num2 + " is "+ num1);
+	} else if( parseInt(num2, 2) > parseInt (num1, 2)) {
+		console.log(" the larger of " + num1 + " and " + num2 + " is "+ num2);
+	} else {
+		console.log(" the value is " + num1 + " and " + num2 + " is "+ "are equal");
+	}
+</script>

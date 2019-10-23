@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<p>1.- El área de un triangulo</p>
+		<p>2.- Suma 2 numeros, si son iguales se triplican</p>
+		<p>3.- Invierte los numeros</p>
+		<p>4.- Toma un Texto y conviertelos a mayusculas </p>
+		<p>5.- Encontrar la palabra mas larga</p>
+		<p>6.- Cuantas vocales tiene una palabra</p>
+	</body>
+	
+	<script>
+		// Ejercicio 1
+		var side1 = 5;
+		var side2 = 6;
+		var side3 =	7;
+		var s= (side1 + side2 + side3)/2;
+		
+		var area = Math.sqrt(s * ((s-side1)*(s-side2)*(s-side3)));
+		console.log("1")
+		console.log(area);
+		//Ejercicio 2
+		function sumTriple(x,y){
+			if (x == y) {
+				return 3 * (x + y);
+			}
+			else {
+				return (x + y);
+			}
+			}
+			console.log("2")
+			console.log(sumTriple(10,20));
+			console.log(sumTriple(10,10));
+		//Ejercicio 3
+		function  reverseNumber (n){
+			n = n + "";
+			return n.split("").reverse().join("");
+		}
+		console.log("3")
+		console.log (reverseNumber(123456789));
+		
+		//Ejercicio 4
+		function uppercase (str){
+			var array1 = str.split(" ")
+			var newarray1 = [];
+			
+			for(var x = 0; x < array1.length; x++){
+				newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1))
+			}
+			return newarray1.join(" ");
+		}
+		
+		console.log("4")
+		console.log(uppercase("Los chicos y chicas de codellege ven codigo"))
+		
+		//Ejercicio 5
+		function  findLongestWord(str){
+			var array1 = str.match(/\w[a-z]{0,}/gi);
+			var result = array1[0];
+
+			for (var x = 1; x < array1.length; x++){
+				if (result.length < array1[x].length){
+					result = array1[x];
+				}
+			}	
+			return result;
+		}
+		console.log("5")
+		console.log(findLongestWord("Los chicos y chicas de codellege ven codigo"))
+		
+		//Ejercicio 6
+		function vowelCount(str1){
+			var vowelList = "aeiouAEIOU";
+			var vcount = 0;
+			
+			for(var x = 0; x < str1.length; x++){
+				if (vowelList.indexOf(str1[x])!== -1){
+					vcount += 1;
+			}
+		}
+		return vcount;
+	}	
+			console.log("6")
+		console.log(vowelCount("Texto"))
+		
+			
+		//Ejercicio 7
+		function  codellege(arrNum){
+			arrNum.sort(function(x,y){
+			return x-y
+		});
+		
+		var uniqa = [arrNum[0]];
+		var result = [];
+		
+		for(var j = 1; j < arrNum.length; j++){
+			if (arrNum[j-1] !== arrNum [j]){
+				uniqa.push(arrNum[j]);
+			}
+		}
+		result.push (uniqa [1], uniqa[uniqa.length-2]);
+		return result.join(", ");
+	}
+		console.log("7");
+		console.log(codellege([1,2,3,4,5]));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

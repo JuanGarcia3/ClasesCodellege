@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title> marks and grade</title>
+	</head>
+	<body>
+		<h1> hide E-mail</h1>
+	</body>
+</html>
+
+<script>
+	var protectEmail = function (userEmail){
+		var avg, splitted, part1, part2;
+		splitted = userEmail.split("@");
+		part1 = splitted[0];
+		avg = part1.length /2;
+		part1 = part1.substring(0, (part1.length - avg));
+		part2 = splitted[1];
+		
+		return part1 + "...@" + part2 
+	}
+	
+		console.log(protectEmail("correo_ejemplo@noexisto.com"))
+</script>
